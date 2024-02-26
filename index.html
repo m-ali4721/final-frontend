@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <div id="response"></div>
+    <button onclick="getData()">Get Data from Server</button>
+
+    <script>
+        function getData() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = data.message;
+                });
+        }
+    </script>
+</body>
+</html>
