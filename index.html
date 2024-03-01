@@ -13,7 +13,7 @@
 
     <script>
         function getData() {
-            fetch('http://localhost:5000/api/data')
+            fetch('http://13.41.201.204:5000/api/data')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('response').innerText = data.message;
